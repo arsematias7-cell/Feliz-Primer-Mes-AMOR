@@ -108,7 +108,9 @@ h2{
     line-height:1.8;
 }
 
-button{
+.btn-comenzar{
+    display: inline-block;
+    text-decoration: none;
     margin-top:50px;
     border:none;
     background:#1b4f9b;
@@ -121,8 +123,9 @@ button{
     box-shadow:0 0 20px rgba(88,166,255,.4);
 }
 
-button:hover{
+.btn-comenzar:hover{
     transform:scale(1.07);
+    color: white;
 }
 
 .card{
@@ -183,18 +186,14 @@ button:hover{
 
 <div class="stars" id="stars"></div>
 
-<audio id="music" loop>
-    <source src="adele.mp3" type="audio/mpeg">
-</audio>
-
 <section class="fade">
     <h1>Mati & Vicky ❤️</h1>
     <div class="frase">
         Nuestra historia recién comienza, mi cachichien.
     </div>
-    <button onclick="iniciar()">
+    <a href="#historia" class="btn-comenzar">
         Abrir nuestro primer mes 💙
-    </button>
+    </a>
 </section>
 
 <section id="historia">
@@ -267,13 +266,6 @@ button:hover{
 </section>
 
 <script>
-function iniciar(){
-    document.getElementById('music').play().catch(() => {});
-    document.getElementById('historia').scrollIntoView({
-        behavior:'smooth'
-    });
-}
-
 /* ESTRELLAS */
 for(let i = 0; i < 150; i++){
     const s = document.createElement('div');
