@@ -229,21 +229,24 @@ button:hover{
 
     <div class="galeria">
 
-        <img src="foto1.jpg.jpeg">
-        <img src="foto2.jpg.jpeg">
-        <img src="foto3.jpg.jpeg">
-        <img src="foto4.jpg.jpeg">
-        <img src="foto5.jpg.jpeg">
-        <img src="foto6.jpg.jpeg">
-        <img src="foto7.jpg.jpeg">
-        <img src="foto8.jpg.jpeg">
-        <img src="foto9.jpg.jpeg">
-        <img src="foto10.jpg.jpeg">
-        <img src="foto11.jpg.jpeg">
-        <img src="foto12.jpg.jpeg">
-        <img src="foto13.jpg.jpeg">
-        <img src="foto14.jpg.jpeg">
-        <img src="foto15.jpg.jpeg">
+        <img src="imagenes/foto1.jpg.jpeg" alt="Foto 1">
+        <img src="imagenes/foto2.jpg.jpeg" alt="Foto 2">
+        <img src="imagenes/foto3.jpg.jpeg" alt="Foto 3">
+        <img src="imagenes/foto4.jpg.jpeg" alt="Foto 4">
+        <img src="imagenes/foto5.jpg.jpeg" alt="Foto 5">
+        <img src="imagenes/foto6.jpg.jpeg" alt="Foto 6">
+        <img src="imagenes/foto7.jpg.jpeg" alt="Foto 7">
+        <img src="imagenes/foto8.jpg.jpeg" alt="Foto 8">
+        <img src="imagenes/foto9.jpg.jpeg" alt="Foto 9">
+        <img src="imagenes/foto10.jpg.jpeg" alt="Foto 10">
+        <img src="imagenes/foto11.jpg.jpeg" alt="Foto 11">
+        <img src="imagenes/foto12.jpg.jpeg" alt="Foto 12">
+        <img src="imagenes/foto13.jpg.jpeg" alt="Foto 13">
+        <img src="imagenes/foto14.jpg.jpeg" alt="Foto 14">
+        <img src="imagenes/foto15.jpg.jpeg" alt="Foto 15">
+
+    </div>
+
         
 
     </div>
@@ -546,24 +549,24 @@ button:hover{
 
     <div class="galeria">
 
-        <img src="foto1.jpg.jpeg">
-        <img src="foto2.jpg.jpeg">
-        <img src="foto3.jpg.jpeg">
-        <img src="foto4.jpg.jpeg">
-        <img src="foto5.jpg.jpeg">
-        <img src="foto6.jpg.jpeg">
-        <img src="foto7.jpg.jpeg">
-        <img src="foto8.jpg.jpeg">
-        <img src="foto9.jpg.jpeg">
-        <img src="foto10.jpg.jpeg">
-        <img src="foto11.jpg.jpeg">
-        <img src="foto12.jpg.jpeg">
-        <img src="foto13.jpg.jpeg">
-        <img src="foto14.jpg.jpeg">
-        <img src="foto15.jpg.jpeg">
-        
+        <img src="imagenes/foto1.jpg.jpeg" alt="Foto 1">
+        <img src="imagenes/foto2.jpg.jpeg" alt="Foto 2">
+        <img src="imagenes/foto3.jpg.jpeg" alt="Foto 3">
+        <img src="imagenes/foto4.jpg.jpeg" alt="Foto 4">
+        <img src="imagenes/foto5.jpg.jpeg" alt="Foto 5">
+        <img src="imagenes/foto6.jpg.jpeg" alt="Foto 6">
+        <img src="imagenes/foto7.jpg.jpeg" alt="Foto 7">
+        <img src="imagenes/foto8.jpg.jpeg" alt="Foto 8">
+        <img src="imagenes/foto9.jpg.jpeg" alt="Foto 9">
+        <img src="imagenes/foto10.jpg.jpeg" alt="Foto 10">
+        <img src="imagenes/foto11.jpg.jpeg" alt="Foto 11">
+        <img src="imagenes/foto12.jpg.jpeg" alt="Foto 12">
+        <img src="imagenes/foto13.jpg.jpeg" alt="Foto 13">
+        <img src="imagenes/foto14.jpg.jpeg" alt="Foto 14">
+        <img src="imagenes/foto15.jpg.jpeg" alt="Foto 15">
 
     </div>
+
 
 </section>
 
@@ -618,42 +621,39 @@ button:hover{
 <script>
 
 function iniciar(){
-    document.getElementById('music').play();
+    document.getElementById('music').play().catch(() => {});
     document.getElementById('historia').scrollIntoView({
         behavior:'smooth'
     });
 }
 
 /* ESTRELLAS */
-
-for(let i=0;i<150;i++){
-    const s=document.createElement('div');
-    s.className='star';
-    s.style.left=Math.random()*100+'%';
-    s.style.top=Math.random()*100+'%';
-    s.style.animationDelay=Math.random()*5+'s';
+for(let i = 0; i < 150; i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 5 + 's';
     document.getElementById('stars').appendChild(s);
 }
 
 /* CORAZONES */
-
-setInterval(()=>{
-    const h=document.createElement('div');
-    h.className='heart';
-    h.innerHTML='♥';
-    h.style.left=Math.random()*100+'%';
-    h.style.fontSize=(20+Math.random()*30)+'px';
+setInterval(() => {
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.innerHTML = '♥';
+    h.style.left = Math.random() * 100 + '%';
+    h.style.fontSize = (20 + Math.random() * 30) + 'px';
 
     document.body.appendChild(h);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         h.remove();
-    },10000);
+    }, 10000);
 
-},1200);
+}, 1200);
 
 /* CONTADOR */
-
 function actualizar(){
 
     const inicio = new Date('2026-05-17T00:00:00');
@@ -661,19 +661,18 @@ function actualizar(){
 
     const diferencia = ahora - inicio;
 
-    const dias = Math.floor(diferencia/(1000*60*60*24));
-    const horas = Math.floor((diferencia/(1000*60*60))%24);
-    const minutos = Math.floor((diferencia/(1000*60))%60);
-    const segundos = Math.floor((diferencia/1000)%60);
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+    const segundos = Math.floor((diferencia / 1000) % 60);
 
     document.getElementById('contador').innerHTML =
         `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos juntos 💙`;
 }
 
-setInterval(actualizar,1000);
+setInterval(actualizar, 1000);
 actualizar();
 
 </script>
-
 </body>
 </html>
