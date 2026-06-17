@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mati & Vicky ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond',serif;
+    color:white;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top,#17325f 0%,#08101f 35%,#000 100%);
+}
+
+/* ESTRELLAS */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:.2}
+    50%{opacity:1}
+}
+
+/* CORAZONES */
+
+.heart{
+    position:fixed;
+    color:#6ea8ff;
+    opacity:.15;
+    animation:float 10s linear forwards;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+h1{
+    font-family:'Parisienne',cursive;
+    font-size:6rem;
+    color:#d6e8ff;
+    text-shadow:
+    0 0 15px #58a6ff,
+    0 0 35px #58a6ff;
+}
+
+h2{
+    font-family:'Parisienne',cursive;
+    font-size:4rem;
+    color:#cfe4ff;
+    margin-bottom:30px;
+}
+
+.frase{
+    font-family:'Parisienne',cursive;
+    font-size:2.4rem;
+    margin-top:20px;
+    color:#f0f7ff;
+    max-width:900px;
+}
+
+.texto{
+    max-width:900px;
+    font-size:1.7rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:50px;
+    border:none;
+    background:#1b4f9b;
+    color:white;
+    padding:18px 40px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1.2rem;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(88,166,255,.4);
+}
+
+button:hover{
+    transform:scale(1.07);
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    padding:50px;
+    border-radius:30px;
+    max-width:1000px;
+    box-shadow:0 0 40px rgba(88,166,255,.2);
+}
+
+.galeria{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    width:100%;
+    padding:30px;
+}
+
+.galeria img{
+    width:300px;
+    height:420px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(88,166,255,.35);
+    transition:.5s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+.contador{
+    font-size:2rem;
+    margin-top:20px;
+    color:#cfe4ff;
+}
+
+.fade{
+    animation:fade 2s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<audio id="music" loop>
+    <source src="adele.mp3" type="audio/mpeg">
+</audio>
+
+<section class="fade">
+
+    <h1>Mati & Vicky ❤️</h1>
+
+    <div class="frase">
+        Nuestra historia recién comienza, mi cachichien.
+    </div>
+
+    <button onclick="iniciar()">
+        Abrir nuestro primer mes 💙
+    </button>
+
+</section>
+
+<section id="historia">
+
+    <div class="card fade">
+
+        <h2>Un Mes Juntos</h2>
+
+        <div class="texto">
+            Hace apenas un mes decidimos empezar esta historia juntos,
+            y en tan poquito tiempo me regalaste muchísimas sonrisas,
+            momentos hermosos y recuerdos que voy a guardar para siempre.
+            <br><br>
+            Quizás sea solo el comienzo…
+            pero si este primer capítulo fue tan lindo,
+            no puedo imaginar todo lo que nos espera.
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Nuestros Momentos 📸</h2>
+
+    <div class="galeria">
+
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+        <img src="foto4.jpg">
+        <img src="foto5.jpg">
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="card">
+
+        <h2>Para Vicky ❤️</h2>
+
+        <div class="texto">
+
+            Gracias por este primer mes juntos.
+            <br><br>
+
+            Gracias por cada abrazo,
+            por cada charla,
+            por cada mirada y por cada momento que compartimos.
+            <br><br>
+
+            Llegaste a mi vida y, sin darte cuenta,
+            hiciste que muchas cosas se vean más lindas.
+            <br><br>
+
+            No sé todo lo que el futuro tiene preparado para nosotros,
+            pero sí sé que quiero seguir descubriéndolo de tu mano.
+            <br><br>
+
+            Nuestra historia recién comienza, mi cachichien,
+            y deseo que este sea solamente el primero de muchísimos meses más.
+            ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>17 • 05 • 2026 ❤️</h2>
+
+    <div class="contador" id="contador"></div>
+
+    <div class="frase" style="margin-top:50px">
+        El primer capítulo de muchos más...
+        <br>
+        Te quiero muchísimo, Vicky 💙
+    </div>
+
+</section>
+
+<script>
+
+function iniciar(){
+    document.getElementById('music').play();
+    document.getElementById('historia').scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
+/* ESTRELLAS */
+
+for(let i=0;i<150;i++){
+    const s=document.createElement('div');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=Math.random()*5+'s';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mati & Vicky ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond',serif;
+    color:white;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top,#17325f 0%,#08101f 35%,#000 100%);
+}
+
+/* ESTRELLAS */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:.2}
+    50%{opacity:1}
+}
+
+/* CORAZONES */
+
+.heart{
+    position:fixed;
+    color:#6ea8ff;
+    opacity:.15;
+    animation:float 10s linear forwards;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+h1{
+    font-family:'Parisienne',cursive;
+    font-size:6rem;
+    color:#d6e8ff;
+    text-shadow:
+    0 0 15px #58a6ff,
+    0 0 35px #58a6ff;
+}
+
+h2{
+    font-family:'Parisienne',cursive;
+    font-size:4rem;
+    color:#cfe4ff;
+    margin-bottom:30px;
+}
+
+.frase{
+    font-family:'Parisienne',cursive;
+    font-size:2.4rem;
+    margin-top:20px;
+    color:#f0f7ff;
+    max-width:900px;
+}
+
+.texto{
+    max-width:900px;
+    font-size:1.7rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:50px;
+    border:none;
+    background:#1b4f9b;
+    color:white;
+    padding:18px 40px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1.2rem;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(88,166,255,.4);
+}
+
+button:hover{
+    transform:scale(1.07);
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    padding:50px;
+    border-radius:30px;
+    max-width:1000px;
+    box-shadow:0 0 40px rgba(88,166,255,.2);
+}
+
+.galeria{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    width:100%;
+    padding:30px;
+}
+
+.galeria img{
+    width:300px;
+    height:420px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(88,166,255,.35);
+    transition:.5s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+.contador{
+    font-size:2rem;
+    margin-top:20px;
+    color:#cfe4ff;
+}
+
+.fade{
+    animation:fade 2s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<audio id="music" loop>
+    <source src="adele.mp3" type="audio/mpeg">
+</audio>
+
+<section class="fade">
+
+    <h1>Mati & Vicky ❤️</h1>
+
+    <div class="frase">
+        Nuestra historia recién comienza, mi cachichien.
+    </div>
+
+    <button onclick="iniciar()">
+        Abrir nuestro primer mes 💙
+    </button>
+
+</section>
+
+<section id="historia">
+
+    <div class="card fade">
+
+        <h2>Un Mes Juntos</h2>
+
+        <div class="texto">
+            Hace apenas un mes decidimos empezar esta historia juntos,
+            y en tan poquito tiempo me regalaste muchísimas sonrisas,
+            momentos hermosos y recuerdos que voy a guardar para siempre.
+            <br><br>
+            Quizás sea solo el comienzo…
+            pero si este primer capítulo fue tan lindo,
+            no puedo imaginar todo lo que nos espera.
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Nuestros Momentos 📸</h2>
+
+    <div class="galeria">
+
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+        <img src="foto4.jpg">
+        <img src="foto5.jpg">
+        <img src="foto6.jpg">
+        <img src="foto7.jpg">
+        <img src="foto8.jpg">
+        <img src="foto9.jpg">
+        <img src="foto10.jpg">
+        <img src="foto11.jpg">
+        <img src="foto12.jpg">
+        <img src="foto13.jpg">
+        <img src="foto14.jpg">
+        <img src="foto15.jpg">
+        
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="card">
+
+        <h2>Para Vicky ❤️</h2>
+
+        <div class="texto">
+
+            Gracias por este primer mes juntos.
+            <br><br>
+
+            Gracias por cada abrazo,
+            por cada charla,
+            por cada mirada y por cada momento que compartimos.
+            <br><br>
+
+            Llegaste a mi vida y, sin darte cuenta,
+            hiciste que muchas cosas se vean más lindas.
+            <br><br>
+
+            No sé todo lo que el futuro tiene preparado para nosotros,
+            pero sí sé que quiero seguir descubriéndolo de tu mano.
+            <br><br>
+
+            Nuestra historia recién comienza, mi cachichien,
+            y deseo que este sea solamente el primero de muchísimos meses más.
+            ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>17 • 05 • 2026 ❤️</h2>
+
+    <div class="contador" id="contador"></div>
+
+    <div class="frase" style="margin-top:50px">
+        El primer capítulo de muchos más...
+        <br>
+        Te quiero muchísimo, Vicky 💙
+    </div>
+
+</section>
+
+<script>
+
+function iniciar(){
+    document.getElementById('music').play();
+    document.getElementById('historia').scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
+/* ESTRELLAS */
+
+for(let i=0;i<150;i++){
+    const s=document.createElement('div');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=Math.random()*5+'s';
+    document.getElementById('stars').appendChild(s);
+}
+
+/* CORAZONES */
+
+setInterval(()=>{
+    const h=document.createElement('div');
+    h.className='heart';
+    h.innerHTML='♥';
+    h.style.left=Math.random()*100+'%';
+    h.style.fontSize=(20+Math.random()*30)+'px';
+
+    document.body.appendChild(h);
+
+    setTimeout(()=>{
+        h.remove();
+    },10000);
+
+},1200);
+
+/* CONTADOR */
+
+function actualizar(){
+
+    const inicio = new Date('2026-05-17T00:00:00');
+    const ahora = new Date();
+
+    const diferencia = ahora - inicio;
+
+    const dias = Math.floor(diferencia/(1000*60*60*24));
+    const horas = Math.floor((diferencia/(1000*60*60))%24);
+    const minutos = Math.floor((diferencia/(1000*60))%60);
+    const segundos = Math.floor((diferencia/1000)%60);
+
+    document.getElementById('contador').innerHTML =
+        `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos juntos 💙`;
+}
+
+setInterval(actualizar,1000);
+actualizar();
+
+</script>
+
+</body>
+</html>
